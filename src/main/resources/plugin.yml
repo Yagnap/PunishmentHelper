@@ -1,4 +1,4 @@
-name: Punishment Help
+name: punishmenthelp
 version: ${project.version}
 main: eu.hobbydevs.spigot.punishmenthelp.Main
 api-version: 1.16
@@ -10,7 +10,6 @@ commands:
     permission: punishmenthelper.moderator
     usage: /punisher <name> <playername>
     aliases: punish
-
   punisheredit:
     description: Command to edit punishments and punishable actions for the punisher plugin.
     permission: punishmenthelper.editor
@@ -23,7 +22,6 @@ commands:
     delete:
       usage: /punisheredit delete <name>
       description: Deletes an action from the list.
-
   punisherlist:
     description: List information for the Punisher Helper plugin.
     permission: punishmenthelper.read
@@ -37,20 +35,16 @@ commands:
     punishments:
       description: Lists all possible punishments.
       usage: /punisherlist punishments
-
 permissions:
   punishmenthelper:
-
     moderator:
       description: Allows the player to use the command /punisher.
-      default: false
-
+      default: op
     editor:
       description: Allows the player to use the command /punisheredit.
-      default: false
-
+      default: op
     read:
       description: Allows the player to access /punisherhelper.
-      default: false
+      default: op
 depend:
   - EssentialsX

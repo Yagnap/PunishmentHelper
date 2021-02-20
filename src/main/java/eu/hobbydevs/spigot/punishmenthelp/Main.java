@@ -3,9 +3,6 @@ package eu.hobbydevs.spigot.punishmenthelp;
 import eu.hobbydevs.spigot.punishmenthelp.commands.EditorCommand;
 import eu.hobbydevs.spigot.punishmenthelp.commands.ListCommand;
 import eu.hobbydevs.spigot.punishmenthelp.commands.PunisherCommand;
-import org.bukkit.Bukkit;
-import org.bukkit.Server;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
