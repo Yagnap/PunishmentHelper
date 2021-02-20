@@ -5,7 +5,6 @@ api-version: 1.16
 authors: [ Yagnap ]
 description: A plugin that helps punishing certain offences. You are able to set up certain actions and multiple levels of punishment for that action, getting automatically higher when a new offence is logged by a moderator.
 commands:
-
   punisher:
     description: Command to punish players using the punisher plugin.
     permission: punishmenthelper.moderator
@@ -54,4 +53,4 @@ permissions:
       description: Allows the player to access /punisherhelper.
       default: false
 depend:
-  - Essentials
+  - EssentialsX
