@@ -1,0 +1,57 @@
+name: Punishment Help
+version: ${project.version}
+main: eu.hobbydevs.spigot.punishmenthelp.Main
+api-version: 1.16
+authors: [ Yagnap ]
+description: A plugin that helps punishing certain offences. You are able to set up certain actions and multiple levels of punishment for that action, getting automatically higher when a new offence is logged by a moderator.
+commands:
+
+  punisher:
+    description: Command to punish players using the punisher plugin.
+    permission: punishmenthelper.moderator
+    usage: /punisher <name> <playername>
+    aliases: punish
+
+  punisheredit:
+    description: Command to edit punishments and punishable actions for the punisher plugin.
+    permission: punishmenthelper.editor
+    edit:
+      usage: /punisheredit edit <name> <stage> <new punishment 1>[, new punishment 2]
+      description: Edit a punishment stage of the command.
+    add:
+      usage: /punisheredit add <name> <punishmet 1 stage 1> [punishment 2 stage 1][, punishment 1 stage 2] (etc.)
+      description: Add a new action which shall be punished.
+    delete:
+      usage: /punisheredit delete <name>
+      description: Deletes an action from the list.
+
+  punisherlist:
+    description: List information for the Punisher Helper plugin.
+    permission: punishmenthelper.read
+    usage: /punisherlist <player/actions/punishments>
+    player:
+      description: Lists the offences of a certain player.
+      usage: /punisherlist player <playername>
+    actions:
+      description: Lists action names, or all punishment stages for a specific action.
+      usage: /punisherlist actions [name]
+    punishments:
+      description: Lists all possible punishments.
+      usage: /punisherlist punishments
+
+permissions:
+  punishmenthelper:
+
+    moderator:
+      description: Allows the player to use the command /punisher.
+      default: false
+
+    editor:
+      description: Allows the player to use the command /punisheredit.
+      default: false
+
+    read:
+      description: Allows the player to access /punisherhelper.
+      default: false
+depend:
+  - Essentials
