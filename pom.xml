@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Punishment Help</name>
+    <name>PunishmentHelp</name>
 
     <description>A plugin that helps punishing certain offences. You are able to set up certain actions and multiple
         levels of punishment for that action, getting automatically higher when a new offence is logged by a moderator.
