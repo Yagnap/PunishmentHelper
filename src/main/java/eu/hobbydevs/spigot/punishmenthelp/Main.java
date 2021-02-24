@@ -17,6 +17,8 @@ public final class Main extends JavaPlugin {
         saveDefaultConfig();
         instance = this;
 
+        getLogger().info("PunisherHelp loading now");
+
         getCommand("punisher").setExecutor(new PunisherCommand());
         getCommand("punisheredit").setExecutor(new EditorCommand());
         getCommand("punisherlist").setExecutor(new ListCommand());

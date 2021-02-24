@@ -47,4 +47,4 @@ permissions:
       description: Allows the player to access /punisherhelper.
       default: op
 depend:
-  - EssentialsX
+  - Essentials

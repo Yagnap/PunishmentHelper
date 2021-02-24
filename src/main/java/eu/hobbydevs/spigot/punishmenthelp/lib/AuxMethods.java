@@ -1,5 +1,12 @@
 package eu.hobbydevs.spigot.punishmenthelp.lib;
 
+import com.google.common.base.Predicates;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.regex.Pattern;
+
 public class AuxMethods {
 
     /**
@@ -14,6 +21,35 @@ public class AuxMethods {
         } catch(NumberFormatException e)  {
             return false;
         }
+    }
+
+    public static boolean isTime(String string) {
+        char[] chars = string.toCharArray();
+
+        boolean isString = false;
+        String currentChain = "";
+        String[] validTimeExpressions = new String[]{
+                "second", "sec", "s",
+                "minute", "min", "m",
+                "hour", "h",
+                "day", "d",
+                "week", "w",
+                "month", "year", "y"
+        };
+
+        for(int i = 0; i < chars.length; i++) {
+            if(isString = !isInt(Character.toString(chars[i]))) {
+                currentChain += chars[i];
+            }
+            if(!isString) {
+                if(!Arrays.stream(validTimeExpressions).anyMatch(Predicates.containsPattern(currentChain))) return false;
+                currentChain = "";
+            }
+        }
+
+        if(!isString || !Arrays.stream(validTimeExpressions).anyMatch(Predicates.containsPattern(currentChain))) return false;
+
+        return true;
     }
 
 }
